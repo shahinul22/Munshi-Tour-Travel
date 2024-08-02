@@ -1,9 +1,208 @@
 /* common shared styles */
-body{
-    font-family: 'Lato',sans-serif;
-    font-family: 'Open Sans', sans-serif;
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
-:root{
-    --primary-color: #FD6E0A;
-    --secondary-color:#fff8f3;
+
+:root {
+    --primary-color: #FF5400;
+    --secondary-color: #131318;
+    --des-color: #424247;
+    --card-color: #FBB563;
+    --explore-color: #FFFFFF;
+
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.section-tittle {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    color: var(--explore-color);
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* nav section */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 150px;
+}
+
+nav>ul {
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    list-style: none;
+    margin: 10px;
+
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.nav-img {
+    width: 57px;
+    height: 48px;
+}
+
+/* explore part  */
+.explore {
+    width: 1170px;
+    height: 500px;
+    margin: 100px 150px;
+    /* padding: 500px ; */
+    /* background-image: url('../Images/Group\ 13\ \(1\)\ \(1\).png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; */
+}
+
+.explore h2,
+p {
+    text-align: center;
+}
+
+.explore h2 {
+    color: var(--explore-color);
+
+}
+
+.explore-des {
+    color: lightcyan;
+
+
+}
+
+.explore-container {
+
+    /* background-image: url('../Images/Group\ 13\ \(1\)\ \(1\).png'); */
+    background: url('../Images/Group\ 13\ \(1\)\ \(1\).png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+.explore-container h2,
+.explore-container p {
+    margin: 0;
+    padding: 10px;
+}
+
+.search {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    gap: 20px;
+    border-radius: 5px;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+
+
+
+    /* width: 800px;
+    height: 83px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.4);
+    flex-direction: row;
+    justify-content: space-evenly;
+     gap: 20px;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px; */
+}
+
+.input-field,
+.select-field {
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+
+/* responsive */
+@media screen and (max-width:576px) {
+
+    .nav,
+    .search {
+        flex-direction: column;
+    }
+    
+    .nav>ul {
+        flex-wrap: wrap;
+        align-items:start
+    }
+
+    .explore {
+        max-width: 350px;
+        margin: 30px;
+        width: auto;
+        height: auto;
+    }
+
+    .search {
+        /* margin: 100px; */
+        max-width: 300px;
+        border-radius: 5px;
+    }
+
+    .input-field,
+    .select-field,
+    .btn-primary {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    /* .explore-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .part2 {
+        width: 150%;
+        height: 150%;
+        padding: 50px 30px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    ..input-field,
+    .select-field {
+        width: 400px;
+    } */
+
 }
